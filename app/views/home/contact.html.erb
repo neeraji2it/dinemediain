@@ -1,0 +1,34 @@
+<div class="container">   
+  <div class="content">
+    <div class="contact-leftColumn col-lg-8 col-md-6 col-sm-12">
+      <div class="space-left">
+        <h3><span>Get In Touch</span></h3>
+        <%= form_for(@contact,:as => :contact, :url=>contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
+          <p><%= f.text_field :name, :class => "input-nameContact form-poshytip", :title=>"Enter your full name", :placeholder=>"Name" %></p>
+          <p><%= f.text_field :email, :class =>"input-nameContact form-poshytip", :title=>"Enter your email address", :placeholder=>"Email" %></p>
+          <p><%= f.text_field :subject, :class =>"input-nameContact form-poshytip", :title=>"Enter your subject", :placeholder=>"Subject" %></p>
+          <p><%= f.file_field :attach,:id => "web",:class=>"input-nameContact form-poshytip" %></p>
+          <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-Contact form-poshytip",:id => "comments",:placeholder => "Message" %></p>
+          <p><input type="submit" value="Send" class="btn-send" name="submit" id="submit" /></p>
+        <% end %>
+      </div>
+      <div class="clearF"></div>
+    </div>
+    <div class="contact-rightColumn col-lg-4 col-md-6 col-sm-12">
+      <div class="space-left-service">
+        <h3><span>Contact Information</span></h3>
+        <ul class="list-contactInfo">
+          <li class="icon-add">No.270/2 /21, Near Banu Nursing Home, Sir Mv Road, Bommanahalli, Bangalore - 560068</li>
+          <li class="icon-phone">Phone: 080-41265450/+91-9480018881</li>
+          <li class="icon-email"><a href="neeraj@dine-media.com" title="neeraj@dine-media.com">neeraj@dine-media.com</a></li>
+          <li class="icon-linkedin"><a title="Linkedin" href="http://www.linkedin.com/company/dine-media-interactive ">Linkedin</a></li>
+          <li class="icon-facebook"><a title="Facebook" href="https://www.facebook.com/DineMediaInteractive">Facebook</a></li>
+          <li class="icon-skype"><a title="neeraj_dyno" href="javascript:void(0);">neeraj_dyno</a></li>
+        </ul>
+        <div class="clearF"></div>
+      </div>
+    </div>     			
+    <div class="clearF"></div>
+  </div>		
+</div>
+<%= render "technologies" %>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dine-media</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <script type="text/javascript" language="javascript" src="/assets/jquery.min.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="page-home">
+    <header>
+      <div class="nav-container">
+        <div id="navigation" class="header-top">
+          <div class="container">
+            <div class="navbar navbar-inverse navbar-static-top">
+              <div class="navbar-header">
+                <a href="/" class="col-xs-8 col-sm-10 col-md-12 col-lg-12" title="Dine Media"><img id="logo" src="assets/logo.png" title="Dine Media" alt="Dine Media" /></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>	
+              <div class="navbar-collapse collapse">
+                <ul id="menu" class="nav navbar-nav ae-animation-fade animated fade">
+                  <li class="icon-home <%= params[:action] == "index" ? 'active' : '' %>"><%= link_to "<span>Home</span>".html_safe, root_path, :title => "Home" %></li>
+                  <li class="icon-services <%= params[:action] == "services" ? 'active' : '' %>"><%= link_to "<span>Services</span>".html_safe, services_path, :title => "Services" %></li>
+                  <li class="icon-portfolio <%= params[:action] == "portfolio" ? 'active' : '' %>"><%= link_to "<span>Portfolio</span>".html_safe, portfolio_path, :title => "Portfolio" %></li>
+                  <li class="icon-contact <%= params[:action] == "contact" ? 'active' : '' %>"><%= link_to "<span>Contact</span>".html_safe, contact_path, :title => "Contact" %></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-cloud"></div>
+            <div class="clearF"></div>
+          </div>
+        </div>
+      </div>
+      <% if params[:controller] == "home" && params[:action] == "index" %>
+        <div class="row">                                
+          <div class="col-lg-12 module_cont module_revolution_slider first-module">
+            <script type="text/javascript" src="/assets/slider/jquery.themepunch.plugins.min.js"></script>
+            <script type="text/javascript" src="/assets/slider/jquery.themepunch.revolution.min.js"></script>
+            <div class="rs-fullscreen">
+              <div class="fullwidthbanner-container" >
+                <div class="fullwidthbanner" >
+                  <ul>
+                    <!-- THE FIRST SLIDE -->
+                    <li data-masterspeed="400" data-slotamount="7" data-transition="fade">
+                      <img src="/assets/img/slider/slide2f.jpg" alt="">
+                      <div class="caption lfl ltl start"
+                           data-x="366"
+                           data-y="100"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="500" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img1.png" alt="Image 1"></div>
+
+                      <div class="caption lfl ltl start"
+                           data-x="118"
+                           data-y="250"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="800" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img2.png" alt="Image 2"></div>
+
+                      <div class="caption lfr ltr start"
+                           data-x="718"
+                           data-y="310"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1300" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img3.png" alt="Image 3"></div>
+
+                      <div class="caption lfr ltr start"
+                           data-x="921"
+                           data-y="262"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1700" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img4.png" alt="Image 4"></div>
+
+                      <div class="caption lfr ltr start"
+                           data-x="1083"
+                           data-y="362"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="2200" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img5.png" alt="Image 5"></div>
+
+                      <div class="caption lfl ltl start"
+                           data-x="52"
+                           data-y="257"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="2600" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img6.png" alt="Image 6"></div>
+
+                      <div class="caption lft ltt start"
+                           data-x="150"
+                           data-y="75"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="2600" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img7.png" alt="Image 7"></div>	
+
+                      <div class="caption lfb ltb start"
+                           data-x="845"
+                           data-y="75"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="2600" 
+                           data-speed="1000"><img src="/assets/img/slider/ls2_img8.png" alt="Image 8"></div>	
+
+                    </li>
+
+                    <!-- THE SECOND SLIDE -->
+                    <li data-masterspeed="400" data-slotamount="7" data-transition="fade">
+                      <img src="/assets/img/slider/slide1f.jpg" alt="">
+                      <!-- THE CAPTIONS OF THE FIRST SLIDE -->   		
+                      <div class="caption lfl ltl start"
+                           data-x="73"
+                           data-y="44"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1000" 
+                           data-speed="1000"><img src="/assets/img/slider/ls1_img2.png" alt="Image 2"></div>
+
+                      <div class="caption lft ltr start"
+                           data-x="760"
+                           data-y="102"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1500" 
+                           data-speed="1000"><img src="/assets/img/slider/ls1_img3.png" alt="Image 3"></div>
+
+                      <div class="caption lft ltr start"
+                           data-x="730"
+                           data-y="166"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1750" 
+                           data-speed="1000"><img src="/assets/img/slider/ls1_img4.png" alt="Image 4"></div>
+
+                      <div class="caption lfb ltr start"
+                           data-x="800"
+                           data-y="255"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="2000" 
+                           data-speed="1000"><img src="/assets/img/slider/ls1_img5.png" alt="Image 5"></div>
+
+                    </li>
+
+                    <!-- THE THIRD SLIDE -->
+                    <li data-masterspeed="400" data-slotamount="7" data-transition="fade">
+                      <img src="/assets/img/slider/slide3f.jpg" alt="">
+                      <div class="caption lfl ltl start"
+                           data-x="60"
+                           data-y="335"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1000" 
+                           data-speed="800"><img src="/assets/img/slider/ls3_img2.png" alt="Image 2"></div>
+
+                      <!--div class="caption lfb start"
+                               data-x="45"
+                               data-y="335"
+                               data-easing="easeInOutBack" 
+                               data-start="1250" 
+                               data-speed="1000"><img src="/assets/img/slider/ls3_img2.png" alt="Image 2"></div-->
+
+                      <div class="caption lfl ltl start"
+                           data-x="60"
+                           data-y="387"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="2000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1000" 
+                           data-speed="700"><img src="/assets/img/slider/ls3_img3.png" alt="Image 2"></div>
+
+                      <!--								<div class="caption lfb start"
+                                                                                               data-x="45"
+                                                                                               data-y="387"
+                                                                                               data-easing="easeInOutBack" 
+                                                                                               data-start="1500" 
+                                                                                               data-speed="1000"><img src="/assets/img/slider/ls3_img3.png" alt="Image 3"></div>-->
+
+                      <div class="caption lfl ltl start"
+                           data-x="60"
+                           data-y="439"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="3000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1000" 
+                           data-speed="600"><img src="/assets/img/slider/ls3_img4.png" alt="Image 2"></div>
+
+                      <!--<div class="caption lfb start"
+                               data-x="45"
+                               data-y="439"
+                               data-easing="easeInOutBack" 
+                               data-start="1750" 
+                               data-speed="1000"><img src="/assets/img/slider/ls3_img4.png" alt="Image 4"></div>-->
+
+                      <div class="caption lfl ltl start"
+                           data-x="60"
+                           data-y="495"
+                           data-endeasing="easeInOutBack" 
+                           data-endspeed="1000" 
+                           data-end="6500" 
+                           data-easing="easeInOutBack" 
+                           data-start="1000" 
+                           data-speed="500"><img src="/assets/img/slider/ls3_img5.png" alt="Image 2"></div>	 
+
+                      <!--<div class="caption lfb start"
+                               data-x="45"
+                               data-y="495"
+                               data-easing="easeInOutBack" 
+                               data-start="2000" 
+                               data-speed="1000"><img src="/assets/img/slider/ls3_img5.png" alt="Image 5"></div>-->
+
+                    </li>
+                  </ul>
+                  <div class="tp-bannertimer tp-bottom"></div>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              //var tpj=jQuery;
+              //$.noConflict();
+              //<![CDATA[
+              $(document).ready(function() {
+                $('.rs-fullscreen').css('margin-left', -1 * ($(window).width() - $('.container').width()) / 2 + 'px').width($(window).width());
+                if ($.fn.cssOriginal != undefined)
+                  $.fn.css = $.fn.cssOriginal;
+                var api = $('.fullwidthbanner').revolution({
+                  delay: 7000,
+                  startheight: 450,
+                  startwidth: 1230,
+                  hideThumbs: 200,
+                  thumbWidth: 100, // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+                  thumbHeight: 50,
+                  thumbAmount: 5,
+                  navigationType: "none", //bullet, thumb, none, both (No Thumbs In FullWidth Version !)
+                  navigationArrows: "verticalcentered", //nexttobullets, verticalcentered, none
+                  navigationStyle: "round", //round,square,navbar
+                  touchenabled: "on", // Enable Swipe Function : on/off
+                  onHoverStop: "off", // Stop Banner Timet at Hover on Slide on/off
+                  navOffsetHorizontal: 0,
+                  navOffsetVertical: 20,
+                  stopAtSlide: -1, // Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+                  stopAfterLoops: -1, // Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+                  hideCaptionAtLimit: 0, // It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+                  hideAllCaptionAtLilmit: 0, // Hide all The Captions if Width of Browser is less then this value
+                  hideSliderAtLimit: 0, // Hide the whole slider, and stop also functions if Width of Browser is less than this value
+                  shadow: 0, //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
+                  fullWidth: "on"	// Turns On or Off the Fullwidth Image Centering in FullWidth Modus
+                });
+              });
+              //]]
+            </script>
+
+          </div><!--.module_cont -->
+          <div class="clear"><!-- ClearFIX --></div>                                                                    
+        </div>
+      <% else %>
+        <div id="banner-innerpage">
+          <div class="container">
+            <h5 class="ae-animation-fade animated fade">
+              <% if params[:action] == "services" %>
+                <span>Services</span>
+                <p><span>Quality I.T services suiting your needs and pockets..</span></p>
+              <% elsif params[:action] == "portfolio" %>
+                <span>Portfolio</span>
+                <p><span>Quality, In-Time, Quality work delivered in budget</span></p>
+              <% elsif params[:action] == "contact" %>
+                <span>Contact</span>
+                <p><span>Please reach us by any means with any I.T related problem</span></p>
+              <% end %>
+            </h5>
+            <div class="clearF"></div>
+          </div>
+        </div>
+      <% end %>
+    </header>
+    <article>
+      <%= yield %>
+    </article>
+    <footer>	
+      <div class="container">
+        <p id="back-top" class="pulse"><a title="back to top" href="#top"></a></p>
+        <div class="footer-top">
+          <div class="icon-downArrow"></div>
+          <div class="animation">
+            <h6><a href="contact" class="btn-request" title="Request a Quote">Request a Quote</a> Already achieved a target of 40,000 hrs in developing ROR apps in 2 years. </h6>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mobile-cent">
+              <p>&copy; Copyright Dine-Media All Rights Reserved.</p>
+            </div>	
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <ul class="menu-footer">
+                <li><a href="/" title="Home"><span>Home</span></a></li>
+                <li><a href="portfolio" title="Portfolio"><span>Portfolio</span></a></li>
+                <li><a href="services" title="Services"><span>Services</span></a></li>
+                <li><a href="contact" title="Contact Us"><span>Contact Us</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bor-social">
+            <div class="box-social">
+              <ul class="list-footerSocial">
+                <li class="icon-footerFacebook"><a href="https://www.facebook.com/DineMediaInteractive" title="footer"></a></li>
+                <li class="icon-footerTwitter"><a href="http://www.linkedin.com/company/dine-media-interactive " title="linkedin"></a></li>
+                <li class="icon-footerRss"><a href="javascript:void(0);" title="rss"></a></li>
+              </ul>
+              <div class="clearF"></div>
+            </div>
+          </div>
+          <div class="row">
+            <h5 class="mobile-heading heading-contact">Contact with us !</h5>			
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <ul class="menu-contact">
+                <li class="icon-email"><a href="mailto:neeraj@dine-media.com" title="neeraj@dine-media.com">neeraj@dine-media.com</a></li>
+                <li class="icon-phone"><a href="javascript:void(0);" title="+91-9480018881">+91-9480018881</a></li>
+                <li class="icon-skypeId"><a href="javascript:void(0);" title="neeraj_dyno">neeraj_dyno</a></li>
+              </ul>
+            </div>
+            <div class="footerEmailBox col-lg-8 col-md-8 col-sm-8">
+              <p><input name="name"  id="name" type="text" class="input-name" title="Enter your full name" placeholder="Name (required)" />
+                <input name="email"  id="email" type="text" class="input-name" title="Enter your email address" placeholder="Email (required)" /></p>
+              <p><input type="text" class="input-name" title="Subject" placeholder="Subject" />
+                <input type="file" class="input-name" title="Attachement" placeholder="Attachement" /></p>
+              <p><textarea  name="message"  id="comments" class="textarea-message" title="Enter your Message" placeholder="Message"></textarea></p>
+              <div align="right"><input type="submit" value="Submit" title="Submit" class="btn-send" name="submit" id="submit"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clearF"></div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/assets/slider/jquery.fractionslider.min.js"></script>
+    <script type="text/javascript" src="/assets/slider/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/assets/slider/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="/assets/slider/cbpBGSlideshow.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/assets/carouFred/jquery.carouFredSel-5.6.2.js"></script>
+    <script type="text/javascript" language="javascript" src="/assets/carouFred/jquery.touchSwipe.js"></script>
+    <script type="text/javascript" language="javascript" src="/assets/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/assets/slider/theme.js"></script>
+    <script type="text/javascript" language="javascript" src="/assets/navjs/waypoints.min.js"></script> 
+    <script type="text/javascript" language="javascript" src="/assets/navjs/navbar.js"></script>
+    <script type="text/javascript" language="javascript" src="/assets/custom.js"></script>
+  </body>
+</html>
