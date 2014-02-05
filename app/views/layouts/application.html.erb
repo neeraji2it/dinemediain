@@ -356,14 +356,14 @@
             <div class="footerEmailBox col-lg-8 col-md-8 col-sm-8">
               <%= form_for(@contact || Contact.new,:as => :contact, :url => contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
                 <p>
-                  <%= f.text_field :name, :class => "input-name validate[required]", :title=>"Enter your full name", :placeholder=>"Name (required)" %>
-                  <%= f.text_field :email, :class =>"input-name validate[required,custom[email]]", :title=>"Enter your email address", :placeholder=>"Email (required)" %>
+                  <%= f.text_field :name, :class => "input-name", :title=>"Enter your full name", :placeholder=>"Name (required)" %>
+                  <%= f.text_field :email, :class =>"input-name", :title=>"Enter your email address", :placeholder=>"Email (required)" %>
                 </p>
                 <p>
-                  <%= f.text_field :subject, :class =>"input-name validate[required]", :title=>"Enter your subject", :placeholder=>"Subject" %>
-                  <%= f.file_field :attach,:id => "web",:class=>"input-name validate[required]" %>
+                  <%= f.text_field :subject, :class =>"input-name", :title=>"Enter your subject", :placeholder=>"Subject" %>
+                  <%= f.file_field :attach,:id => "web",:class=>"input-name" %>
                 </p>
-                <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-message validate[required]",:title => "Enter your Message",:id => "comments",:placeholder => "Message" %></p>
+                <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-message",:title => "Enter your Message",:id => "comments",:placeholder => "Message" %></p>
                 <div align="right"><input type="submit" value="Submit" title="Submit" class="btn-send" name="submit" id="submit"></div>
               <% end %>
             </div>

@@ -861,6 +861,7 @@ ol.list-features{
     list-style:decimal;
     margin-top:0px;
     padding-left:20px;
+    margin-bottom: 5px;
 }
 ol.list-features > li{ 
     float:none;

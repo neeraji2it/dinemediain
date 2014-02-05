@@ -26,10 +26,10 @@ class HomeController < ApplicationController
       end
       if @contact.save
         flash.now[:notice] = 'Your Message Successfully Sent.'
-        redirect_to '/'
       else
-        render :action => "contact"
+        flash.now[:error] = 'Your Message Sending failed, Please try again.'
       end
+      redirect_to '/'
     else
       @contact = Contact.new
     end

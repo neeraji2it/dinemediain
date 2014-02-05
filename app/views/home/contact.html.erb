@@ -4,11 +4,11 @@
       <div class="space-left">
         <h3><span>Get In Touch</span></h3>
         <%= form_for(@contact,:as => :contact, :url=>contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
-          <p><%= f.text_field :name, :class => "input-nameContact form-poshytip validate[required]", :title=>"Enter your full name", :placeholder=>"Name" %></p>
-          <p><%= f.text_field :email, :class =>"input-nameContact form-poshytip validate[required, custom[email]]", :title=>"Enter your email address", :placeholder=>"Email" %></p>
-          <p><%= f.text_field :subject, :class =>"input-nameContact form-poshytip validate[required]", :title=>"Enter your subject", :placeholder=>"Subject" %></p>
-          <p><%= f.file_field :attach,:id => "web",:class=>"input-nameContact form-poshytip validate[required]" %></p>
-          <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-Contact form-poshytip validate[required]",:id => "comments",:placeholder => "Message" %></p>
+          <p><%= f.text_field :name, :class => "input-nameContact form-poshytip", :title=>"Enter your full name", :placeholder=>"Name" %></p>
+          <p><%= f.text_field :email, :class =>"input-nameContact form-poshytip", :title=>"Enter your email address", :placeholder=>"Email" %></p>
+          <p><%= f.text_field :subject, :class =>"input-nameContact form-poshytip", :title=>"Enter your subject", :placeholder=>"Subject" %></p>
+          <p><%= f.file_field :attach,:id => "web",:class=>"input-nameContact form-poshytip" %></p>
+          <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-Contact form-poshytip",:id => "comments",:placeholder => "Message" %></p>
           <p><input type="submit" value="Send" class="btn-send" name="submit" id="submit" /></p>
         <% end %>
       </div>
