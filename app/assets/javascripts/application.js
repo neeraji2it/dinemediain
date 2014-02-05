@@ -12,7 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require slider/jquery.fractionslider.min.js
+//= require slider/modernizr.custom.js
+//= require slider/jquery.imagesloaded.min.js
+//= require slider/cbpBGSlideshow.min.js
+//= require carouFred/jquery.carouFredSel-5.6.2.js
+//= require carouFred/jquery.touchSwipe.js
+//= require bootstrap/bootstrap.min.js
+//= require slider/theme.js
+//= require navjs/waypoints.min.js
+//= require navjs/navbar.js
+//= require custom.js
+//= require jquery.validationEngine.js
+//= require jquery.validationEngine-en.js
+//= require slider/jquery.themepunch.plugins.min.js
+//= require slider/jquery.themepunch.revolution.min.js
+//= require html5.js
 
 $(document).ready(function() {
     setTimeout(function() {
@@ -22,4 +37,5 @@ $(document).ready(function() {
             $(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').slideToggle('medium');
         });
     }, 250);
+    $(".new_contact").validationEngine();
 });

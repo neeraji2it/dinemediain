@@ -11,7 +11,4 @@
   <tr>
     <td><%= @contact.comment %></td>
   </tr>
-   <tr>
-    <td><%#= image_tag attachments['photo.png'].url -%><%= link_to image_tag(@contact.attach.url(:thumb)), "http://localhost:3000#{@contact.attach.url(:original)}" %></td>
-  </tr>
 </table>

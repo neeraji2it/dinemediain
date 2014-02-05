@@ -173,9 +173,9 @@ $(window).load(function() {
 
 if (navigator.appVersion.indexOf("Win") != -1)
 {
-    $('body').list - webDesign('visibility', 'hidden');
+    $('body .list-webDesign').css('visibility', 'hidden');
 } else {
-    $('body').list - webDesign('', ''); // this will style body for other OS (Linux/Mac)
+    $('body .list-webDesign').css('', ''); // this will style body for other OS (Linux/Mac)
 }
 function go2url(url) {
     window.location.href = url;

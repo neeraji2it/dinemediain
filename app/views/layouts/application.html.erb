@@ -2,9 +2,8 @@
 <html>
   <head>
     <title>Dine-media</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <script type="text/javascript" language="javascript" src="/assets/jquery.min.js"></script>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body class="page-home">
@@ -39,8 +38,6 @@
       <% if params[:controller] == "home" && params[:action] == "index" %>
         <div class="row">                                
           <div class="col-lg-12 module_cont module_revolution_slider first-module">
-            <script type="text/javascript" src="/assets/slider/jquery.themepunch.plugins.min.js"></script>
-            <script type="text/javascript" src="/assets/slider/jquery.themepunch.revolution.min.js"></script>
             <div class="rs-fullscreen">
               <div class="fullwidthbanner-container" >
                 <div class="fullwidthbanner" >
@@ -357,28 +354,23 @@
               </ul>
             </div>
             <div class="footerEmailBox col-lg-8 col-md-8 col-sm-8">
-              <p><input name="name"  id="name" type="text" class="input-name" title="Enter your full name" placeholder="Name (required)" />
-                <input name="email"  id="email" type="text" class="input-name" title="Enter your email address" placeholder="Email (required)" /></p>
-              <p><input type="text" class="input-name" title="Subject" placeholder="Subject" />
-                <input type="file" class="input-name" title="Attachement" placeholder="Attachement" /></p>
-              <p><textarea  name="message"  id="comments" class="textarea-message" title="Enter your Message" placeholder="Message"></textarea></p>
-              <div align="right"><input type="submit" value="Submit" title="Submit" class="btn-send" name="submit" id="submit"></div>
+              <%= form_for(@contact || Contact.new,:as => :contact, :url => contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
+                <p>
+                  <%= f.text_field :name, :class => "input-name validate[required]", :title=>"Enter your full name", :placeholder=>"Name (required)" %>
+                  <%= f.text_field :email, :class =>"input-name validate[required,custom[email]]", :title=>"Enter your email address", :placeholder=>"Email (required)" %>
+                </p>
+                <p>
+                  <%= f.text_field :subject, :class =>"input-name validate[required]", :title=>"Enter your subject", :placeholder=>"Subject" %>
+                  <%= f.file_field :attach,:id => "web",:class=>"input-name validate[required]" %>
+                </p>
+                <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-message validate[required]",:title => "Enter your Message",:id => "comments",:placeholder => "Message" %></p>
+                <div align="right"><input type="submit" value="Submit" title="Submit" class="btn-send" name="submit" id="submit"></div>
+              <% end %>
             </div>
           </div>
         </div>
         <div class="clearF"></div>
       </div>
     </footer>
-    <script type="text/javascript" src="/assets/slider/jquery.fractionslider.min.js"></script>
-    <script type="text/javascript" src="/assets/slider/modernizr.custom.js"></script>
-    <script type="text/javascript" src="/assets/slider/jquery.imagesloaded.min.js"></script>
-    <script type="text/javascript" src="/assets/slider/cbpBGSlideshow.min.js"></script>
-    <script type="text/javascript" language="javascript" src="/assets/carouFred/jquery.carouFredSel-5.6.2.js"></script>
-    <script type="text/javascript" language="javascript" src="/assets/carouFred/jquery.touchSwipe.js"></script>
-    <script type="text/javascript" language="javascript" src="/assets/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" language="javascript" src="/assets/slider/theme.js"></script>
-    <script type="text/javascript" language="javascript" src="/assets/navjs/waypoints.min.js"></script> 
-    <script type="text/javascript" language="javascript" src="/assets/navjs/navbar.js"></script>
-    <script type="text/javascript" language="javascript" src="/assets/custom.js"></script>
   </body>
 </html>
