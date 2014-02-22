@@ -80,10 +80,10 @@ Dinemedia::Application.configure do
   
   config.action_mailer.default_url_options = { :host => 'http://dine-media.in/' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
+   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    #    :domain               => 'dine-media.com',
+    :domain               => 'gmail.com',
     :user_name            => 'marketing@dine-media.com',
     :password             => 'brother!@#$5',
     :authentication       => 'plain',

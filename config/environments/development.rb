@@ -31,7 +31,7 @@ Dinemedia::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-#    :domain               => 'dine-media.com',
+    :domain               => 'dine-media.com',
     :user_name            => 'marketing@dine-media.com',
     :password             => 'brother!@#$5',
     :authentication       => 'plain',
