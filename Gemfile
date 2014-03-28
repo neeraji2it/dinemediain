@@ -27,6 +27,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'execjs'
 
 #gem "paperclip", "~> 3.0"
 gem 'validates_email_format_of'
@@ -34,8 +35,10 @@ gem 'jQuery-Validation-Engine-rails'
 gem 'simple_captcha', :git => 'git://github.com/Azdaroth/simple-captcha.git', :branch => 'rails-4'
 gem "remotipart", "~> 1.0.2"
 gem "prototype-rails"
-gem "pg"
 
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'capistrano-ext'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
