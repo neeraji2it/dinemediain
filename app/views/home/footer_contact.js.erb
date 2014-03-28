@@ -1,0 +1,5 @@
+<% if @footer_contact.new_record? %>
+  $('#contact_form').html('<%= escape_javascript(render :partial => "/layouts/contact_form") %>')
+<% else %>
+  window.location.reload();
+<% end %>

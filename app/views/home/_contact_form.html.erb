@@ -1,0 +1,18 @@
+<%= form_for(@contact,:as => :contact, :url => contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @contact.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p><%= f.text_field :name, :class => "input-nameContact form-poshytip", :title=>"Enter your full name", :placeholder=>"Name" %></p>
+  <p><%= f.text_field :email, :class =>"input-nameContact form-poshytip", :title=>"Enter your email address", :placeholder=>"Email" %></p>
+  <p><%= f.text_field :subject, :class =>"input-nameContact form-poshytip", :title=>"Enter your subject", :placeholder=>"Subject" %></p>
+  <p><%= f.file_field :attach,:id => "web",:class=>"input-nameContact form-poshytip" %></p>
+  <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-Contact form-poshytip",:id => "comments",:placeholder => "Message" %></p>
+  <%= show_simple_captcha %>
+  <p><input type="submit" value="Send" class="btn-send" name="submit" id="submit" /></p>
+<% end %>

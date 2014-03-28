@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/Azdaroth/simple-captcha.git
+  revision: ab5e8aa1e18d735722c1a7d4ae6950ab09c12989
+  branch: rails-4
+  specs:
+    simple_captcha (0.1.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +63,8 @@ GEM
     mysql2 (0.3.14)
     pg (0.17.1)
     polyglot (0.3.3)
+    prototype-rails (4.0.0)
+      rails (~> 4.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -75,6 +84,7 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    remotipart (1.0.5)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -117,9 +127,12 @@ DEPENDENCIES
   jquery-rails
   mysql2
   pg
+  prototype-rails
   rails (= 4.0.2)
+  remotipart (~> 1.0.2)
   sass-rails (~> 4.0.0)
   sdoc
+  simple_captcha!
   turbolinks
   uglifier (>= 1.3.0)
   validates_email_format_of

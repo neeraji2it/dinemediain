@@ -31,7 +31,9 @@ gem 'jbuilder', '~> 1.2'
 #gem "paperclip", "~> 3.0"
 gem 'validates_email_format_of'
 gem 'jQuery-Validation-Engine-rails'
-
+gem 'simple_captcha', :git => 'git://github.com/Azdaroth/simple-captcha.git', :branch => 'rails-4'
+gem "remotipart", "~> 1.0.2"
+gem "prototype-rails"
 gem "pg"
 
 group :doc do

@@ -3,6 +3,7 @@ Dinemedia::Application.routes.draw do
   match 'services'=> "home#services", :via => :get
   match 'portfolio'=> "home#portfolio", :via => :get
   match 'contact'=> "home#contact", :via => [:get,:post]
+  post 'footer_contact'=> "home#footer_contact"
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

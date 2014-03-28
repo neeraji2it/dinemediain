@@ -28,6 +28,8 @@
 //= require slider/jquery.themepunch.plugins.min.js
 //= require slider/jquery.themepunch.revolution.min.js
 //= require html5.js
+//= require jquery.remotipart
+
 
 $(document).ready(function() {
     setTimeout(function() {
@@ -38,4 +40,17 @@ $(document).ready(function() {
         });
     }, 250);
     $(".new_contact").validationEngine();
+});
+
+jQuery(document).ajaxStart(function(settings) {
+    if (!jQuery.noSpinner)
+        jQuery('#ajax_loader_big_div').show();
+});
+jQuery(document).ajaxStop(function() {
+    jQuery('#ajax_loader_big_div').hide();
+});
+
+jQuery('#contacts_form').bind("ajax:success", function(){
+    if ( $(this).data('remotipartSubmitted') ) {
+}
 });

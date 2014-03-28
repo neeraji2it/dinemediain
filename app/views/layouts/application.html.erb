@@ -353,24 +353,17 @@
                 <li class="icon-skypeId"><a href="javascript:void(0);" title="neeraj_dyno">neeraj_dyno</a></li>
               </ul>
             </div>
-            <div class="footerEmailBox col-lg-8 col-md-8 col-sm-8">
-              <%= form_for(@contact || Contact.new,:as => :contact, :url => contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
-                <p>
-                  <%= f.text_field :name, :class => "input-name", :title=>"Enter your full name", :placeholder=>"Name (required)" %>
-                  <%= f.text_field :email, :class =>"input-name", :title=>"Enter your email address", :placeholder=>"Email (required)" %>
-                </p>
-                <p>
-                  <%= f.text_field :subject, :class =>"input-name", :title=>"Enter your subject", :placeholder=>"Subject" %>
-                  <%= f.file_field :attach,:id => "web",:class=>"input-name" %>
-                </p>
-                <p><%= f.text_area :comment,:rows =>"5", :cols=>"20", :class=>"textarea-message",:title => "Enter your Message",:id => "comments",:placeholder => "Message" %></p>
-                <div align="right"><input type="submit" value="Submit" title="Submit" class="btn-send" name="submit" id="submit"></div>
-              <% end %>
+            <div id='contact_form'>
+              <%= render :partial => "/layouts/contact_form" %>
             </div>
           </div>
         </div>
         <div class="clearF"></div>
       </div>
     </footer>
+     <div id='ajax_loader_big_div' style='z-index:1000000;'>
+      <img alt="Ajax-loader-big" src="/assets/ajax-loader-big.gif" style="z-index:1000000;" />
+      <img alt="Ajax-loader-big" id="ajax_loader_big" src="/assets/ajax-loader-big.gif" style="z-index:1000000;" />
+    </div>
   </body>
 </html>
