@@ -14,3 +14,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+/nbproject/*
+/config/database.yml
+/config/deploy/production.rb
+/config/deploy.rb
+/public/system/*
+Capfile
+
