@@ -406,9 +406,10 @@ h5, h2{
 h5.icon-comma{
     font-family:Georgia, "Times New Roman", Times, serif;
     font-weight:normal;
-    margin:0px 70px;
     color:#E1E1E1;
-    line-height:18px;
+    line-height: 21px;
+    margin: 0 70px;
+    letter-spacing: 1px;
     background:url(/assets/right-comma.png) no-repeat right top;
 }
 h5.icon-comma em{
