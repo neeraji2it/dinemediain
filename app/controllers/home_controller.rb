@@ -12,6 +12,10 @@ class HomeController < ApplicationController
     
   end
   
+  def products
+    
+  end
+  
   def contact
     if request.post?
       @contact = Contact.new(contact_params)

@@ -25,10 +25,13 @@
                 <ul id="menu" class="nav navbar-nav ae-animation-fade animated fade">
                   <li class="icon-home <%= params[:action] == "index" ? 'active' : '' %>"><%= link_to "<span>Home</span>".html_safe, root_path, :title => "Home" %></li>
                   <li class="icon-services <%= params[:action] == "services" ? 'active' : '' %>"><%= link_to "<span>Services</span>".html_safe, services_path, :title => "Services" %></li>
+                  <li class="icon-services <%= params[:action] == "products" ? 'active' : '' %>"><%= link_to "<span>Products</span>".html_safe, products_path, :title => "Products" %></li> 
                   <li class="icon-portfolio <%= params[:action] == "portfolio" ? 'active' : '' %>"><%= link_to "<span>Portfolio</span>".html_safe, portfolio_path, :title => "Portfolio" %></li>
                   <li class="icon-contact <%= params[:action] == "contact" ? 'active' : '' %>"><%= link_to "<span>Contact</span>".html_safe, contact_path, :title => "Contact" %></li>
                 </ul>
               </div>
+              
+            
             </div>
             <div class="bg-cloud"></div>
             <div class="clearF"></div>
@@ -36,7 +39,8 @@
         </div>
       </div>
       <% if params[:controller] == "home" && params[:action] == "index" %>
-        <div class="row">                                
+        <div class="row">   
+          
           <div class="col-lg-12 module_cont module_revolution_slider first-module">
             <div class="rs-fullscreen">
               <div class="fullwidthbanner-container" >
@@ -289,7 +293,7 @@
           <div class="clear"><!-- ClearFIX --></div>                                                                    
         </div>
       <% else %>
-        <div id="banner-innerpage">
+       <div id="banner-innerpage">
           <div class="container">
             <h5 class="ae-animation-fade animated fade">
               <% if params[:action] == "services" %>
@@ -320,6 +324,7 @@
             <h6><a href="contact" class="btn-request" title="Request a Quote">Request a Quote</a> Already achieved a target of 40,000 hrs in developing ROR apps in 2 years. </h6>
           </div>
         </div>
+        
         <div class="footer-bottom">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mobile-cent">

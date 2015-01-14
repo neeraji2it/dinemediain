@@ -2,6 +2,7 @@ Dinemedia::Application.routes.draw do
   
   match 'services'=> "home#services", :via => :get
   match 'portfolio'=> "home#portfolio", :via => :get
+  match 'products' => "home#products", :via => :get
   match 'contact'=> "home#contact", :via => [:get,:post]
   post 'footer_contact'=> "home#footer_contact"
   root :to => "home#index"

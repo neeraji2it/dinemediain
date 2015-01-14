@@ -1224,7 +1224,11 @@ header .row-fluid{ position:relative; top:0px; }
         margin:0% 16% !important;
         width:68% !important;
     }
-    textarea.textarea-message{ width:98%; }	
+    textarea.textarea-message{ width:98%; }
+     ul#menu{
+        position: relative;
+    top: -57px; 
+    }
 }
 @media (max-width:900px) {
     #banner{ min-height:410px; }
@@ -1235,10 +1239,16 @@ header .row-fluid{ position:relative; top:0px; }
     .bor-social{ margin-top:0px; }
     .cbp-bicontrols{ padding-top:140px; }
     textarea.textarea-message{ width:97.5%; }
+   
 }
 @media (max-width:768px) {
     #carousel-3 > li{ max-width:645px; }
     textarea.textarea-message{ width:98%; }
+    ul#menu{
+        position: relative;
+    top: -57px; 
+    }
+   
 }	
 @media (max-width:766px) {
     .mobile-cent{ text-align:center; }
@@ -1286,6 +1296,10 @@ header .row-fluid{ position:relative; top:0px; }
     }
     #carousel-3 > li { max-width: 525px; }	
     textarea.textarea-message{ width:97.8%; }	
+    ul#menu{
+        position: relative;
+    top:0px;
+    }
 }	
 @media (max-width:640px) {
     #banner{ min-height:325px; }
