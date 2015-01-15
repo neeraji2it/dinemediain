@@ -35,9 +35,10 @@ gem 'simple_captcha', :git => 'git://github.com/Azdaroth/simple-captcha.git', :b
 gem "remotipart", "~> 1.0.2"
 gem "prototype-rails"
 
-gem 'capistrano'
-gem 'rvm-capistrano'
-gem 'capistrano-ext'
+gem 'capistrano', '~> 3.2.1'
+gem 'capistrano-rails', '~> 1.1'
+# gem 'rvm-capistrano'
+# gem 'capistrano-ext'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

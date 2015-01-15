@@ -18,8 +18,8 @@
 /nbproject/*
 nbproject/
 /config/database.yml
-/config/deploy/production.rb
-/config/deploy.rb
+#/config/deploy/production.rb
+#/config/deploy.rb
 /public/system/*
 Capfile
 
